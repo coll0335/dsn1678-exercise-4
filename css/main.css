@@ -13,3 +13,106 @@ img {
 section {
 	padding: 10rem 0;
 }
+
+.sun {
+	width: 300px;
+}
+
+.sun-section {
+	background: transparent url("../img/mars-pano.jpg") no-repeat center top;
+	background-size: cover;
+}
+
+.dipper {
+	width: 200px;
+	opacity: 0;
+}
+
+.js-dipper-fade {
+	-webkit-animation: dipper-fade 1s linear forwards;
+
+	/*
+	animation-fill-mode:forwards;
+	*/
+}
+
+@-webkit-keyframes dipper-fade {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}
+
+/*----------------------------- Start of Shuttle Animation ----------------------------- */
+
+.shuttle {
+	width: 200px;
+	opacity:0;
+}
+
+.shuttle-section {
+	background-color: #f6a500;
+}
+
+.js-shuttle-fade {
+	-webkit-animation: shuttle-fade 1s linear forwards;
+}
+
+@-webkit-keyframes shuttle-fade {
+	0% {
+		opacity: 0;
+		margin-top: 10em;
+	}
+
+	100% {
+		opacity: 1;
+		margin-top: 0;
+	}
+}
+
+/*----------------------------- Start of Ships Animation ----------------------------- */
+
+
+.ships li {
+	margin: 0;
+	padding: 0;
+	text-align: center;
+	list-style-type:none;
+	display: inline-block;
+	opacity: 0;
+}
+
+.ships img {
+	width: 150px;
+}
+
+.ships-section {
+	background: transparent url("../img/kasei-valles-canyons.jpg") no-repeat center top;
+	background-size: cover;
+	text-align: center;
+}
+
+.ships li:nth-child(odd) {
+	-webkit-animation: ships-animate 1s linear forwards;
+}
+
+.ships li:nth-child(even) {
+	-webkit-animation: ships-animate 1.5s linear forwards;
+}
+
+
+@-webkit-keyframes ships-animate {
+	0% {
+		opacity: 0;
+		transform: translateY(100px);
+	}
+
+	100% {
+		opacity: 1;
+		transform translateY(0);
+	}
+}
+
